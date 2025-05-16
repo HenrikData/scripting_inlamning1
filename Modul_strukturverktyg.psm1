@@ -16,5 +16,13 @@ Function Starta-Strukturverktyg {
         Write-Host "Mappen finns redan: $stig"
     }
 
+ # Skapar undermappar
+    $undermappar = @("logs", "scripts", "temp")
+
+    foreach ($mapp in $undermappar) {
+    $fullStig = Join-Path -Path $stig -ChildPath $mapp
+    New-Item -ItemType Directory -Path $fullStig
+    }
+
 
 }
