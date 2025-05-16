@@ -23,6 +23,12 @@ Function Starta-Strukturverktyg {
     $fullStig = Join-Path -Path $stig -ChildPath $mapp
     New-Item -ItemType Directory -Path $fullStig
     }
+# Skapa en loggfil med datum och tid
+    $tidstempel = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $datum = Get-Date -Format "yyyy-MM-dd"  # Du hade glömt att definiera $datum
+    $loggfil = Join-Path -Path $stig -ChildPath "logs/log_$datum.txt"
+
+    Add-Content -Path $loggfil -Value "Struktur skapad: $tidstempel"
 
 
 }
