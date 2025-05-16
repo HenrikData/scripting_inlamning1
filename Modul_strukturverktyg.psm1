@@ -30,5 +30,4 @@ Function Starta-Strukturverktyg {
 
     Add-Content -Path $loggfil -Value "Struktur skapad: $tidstempel"
 
-
 }
