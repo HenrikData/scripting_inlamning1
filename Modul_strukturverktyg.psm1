@@ -8,4 +8,13 @@ Function Starta-Strukturverktyg {
 # Skapa mapp med namnet som anges
     $stig = "./$namn"
 
+ try {
+        New-Item -ItemType Directory -Path $stig -ErrorAction Stop
+        Write-Host "Mappen skapades: $stig"
+    }
+    catch {
+        Write-Host "Mappen finns redan: $stig"
+    }
+
+
 }
