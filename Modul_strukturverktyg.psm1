@@ -5,5 +5,7 @@ Function Starta-Strukturverktyg {
     $namn = Read-Host "Ange ett namn på mappen"
     Write-Host "Du angav: $namn"
 
+# Skapa mapp med namnet som anges
+    $stig = "./$namn"
 
 }
