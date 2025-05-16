@@ -25,7 +25,7 @@ Function Starta-Strukturverktyg {
     }
 # Skapa en loggfil med datum och tid
     $tidstempel = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    $datum = Get-Date -Format "yyyy-MM-dd"  # Du hade glömt att definiera $datum
+    $datum = Get-Date -Format "yyyy-MM-dd"
     $loggfil = Join-Path -Path $stig -ChildPath "logs/log_$datum.txt"
 
     Add-Content -Path $loggfil -Value "Struktur skapad: $tidstempel"
